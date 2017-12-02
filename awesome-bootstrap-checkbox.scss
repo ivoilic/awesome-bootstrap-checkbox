@@ -7,6 +7,10 @@
 $font-family-icon: 'FontAwesome' !default;
 $fa-var-check: "\f00c" !default;
 $check-icon: $fa-var-check !default;
+$border-width: 1px !default;
+$check-border-width: $border-width !default; 
+$border-radius-sm: .2rem !default;
+$check-border-radius: $border-radius-sm !default; 
 
 @mixin checkbox-variant($parent, $color) {
   #{$parent} input[type="checkbox"]:checked + label,
@@ -55,8 +59,8 @@ $check-icon: $fa-var-check !default;
       top: 2px;
       left: 0;
       margin-left: -$form-check-input-gutter;
-      border: 1px solid $input-border-color;
-      border-radius: 3px;
+      border: $check-border-width solid $input-border-color;
+      border-radius: $check-border-radius;
       background-color: #fff;
       @include transition(border 0.15s ease-in-out, color 0.15s ease-in-out);
     }
@@ -102,7 +106,7 @@ $check-icon: $fa-var-check !default;
       width: 10px;
       height: 3px;
       background-color: #555555;
-      border-radius: 2px;
+      border-radius: $check-border-radius;
       margin-left: -16.5px;
       margin-top: 7px;
     }
@@ -187,7 +191,7 @@ $check-icon: $fa-var-check !default;
       top: 2px;
       left: 0;
       margin-left: -20px;
-      border: 1px solid $input-border-color;
+      border: $check-border-width solid $input-border-color;
       border-radius: 50%;
       background-color: #fff;
       @include transition(border 0.15s ease-in-out);
